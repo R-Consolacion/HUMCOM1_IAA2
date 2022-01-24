@@ -1,2 +1,2 @@
 # HUMCOM1IAA2
-Human Computer Interaction
+Human Computer Interaction IAA2
