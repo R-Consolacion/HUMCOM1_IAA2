@@ -1,105 +1,71 @@
 <!DOCTYPE HTML>
-<html>	
+<html>
 	<head>
-		<title>Forms</title>
-		<meta name="author" content="lorie narag" />
-		<meta name="description" content="" />
-	</head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Renato Consolacion" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registration Form Renato Consolacion</title>
+    </head>
 	
-	<body>
-	<font face="tahoma">
-	<blockquote>
-		<h2> Input Types </h2>
-			<form>
-				<fieldset>
-				<legend><h3>Single line Input</h3></legend>
-					Username: <input type="text" size="30" max="25" name="Username" title="" placeholder="enter username" /><br />
-					Password: <input type="password" size="30" max="" name="Password" title="" /><br />
-					Birthday: <input type="date" size="" max="" name="Birthday" title="" /><br />
-					Email Address: <input type="email" size="25"  name="email" title="" placeholder="email@provider.com" /><br />
-					Contact Number: <input type="tel" size="15" max="" name="Contact Number" title="" placeholder="(+00)000-000-0000"/><br />
-					Age: <input type="numer" size="" min=0 max=100 name="Age" title="" /><br />
-				</fieldset>
-				<legend><h3>Multi-line Input</h3></legend>
-					<legend>Comments</legend><textarea col=25 rows=7 max=250 name="Comments" title="" placeholder="add coments">
-					</textarea><br />
-			</form>
+	<body bgcolor="#21211f">
+	<font face="Tahoma" color="white">
+		<form>
+			<h1 align=center>Sign up now!</h1>
+			<header>Fields marked (*) are required</header>
+			<br>
 			
-			<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-				<fieldset>
-				<legend><h3>Other Input</h3></legend>
-					
-					 Range: <input type="range" id="a" name="a" value="50">   100 +
-					 <input type="number" id="b" name="b" value="50">   =  <output name="x" for="a b"></output>
-					 <br/>
-					 Color: <input type="color" size="30" max="" name="Password" title="" /><br />
-					 Month: <input type="month"  /><br />
-					 Week: <input type="week" ><br />
-					 Search<input type="search"> <br/>
-					 Upload: <input type="file" name="pic" accept="images/*">
+				<fieldset style="margin: 0px"> 
+				<legend>Your Details</legend>
+					<label for="name" style="margin: 0px 9px 0px 0px;">Name * </label>
+					<input type="text" name="name" required placeholder="Full name" size="35"><br>
+					<label for="email" style="margin: 0px 12px 0px 0px;" > Email * </label>
+					<input type="email" name="email" required placeholder="e.g. ryan@example.net" size="35"><br>
+					<label for="phone" style="margin: 0px 6px 0px 0px;">Phone * </label>
+					<input type="tel" name="phone" required placeholder="Please enter an eleven-digit number" size="35"><br>
 				</fieldset>
-			</form>
 			
-			<form>
-			<fieldset>
-				<legend><h3>Select Types</h3></legend>
-				<fieldset>
-				<legend><h3>Radiobutton</h3></legend>
-					<input type="radio" name="gender" value="male" checked> Male<br>
-					<input type="radio" name="gender" value="female"> Female<br>
-					<input type="radio" name="gender" value="other"> Other				
-				</fieldset>
-				
-				<fieldset>
-				<legend><h3>Checkbox</h3></legend>
-					<input type="checkbox" name="car" value="f"> Ferrari<br>
-					<input type="checkbox" name="car" value="b"> Bugatti<br>
-					<input type="checkbox" name="car" value="p"> Porsche<br>
-					<input type="checkbox" name="car" value="other"> Other				
-				</fieldset>
-				<fieldset>
-				<legend><h3>List types</h3></legend>
-					<h2>Datalist</h2>
-					<input list="browsers">
-					  <datalist id="browsers">
-						<option value="Internet Explorer">
-						<option value="Firefox">
-						<option value="Chrome">
-						<option value="Opera">
-						<option value="Safari">
-					  </datalist>
+			<br>
+			
+				<fieldset style="margin: 0px">
+					<legend>Delivery Address</legend>
+					<label for="address" style="margin: 0px 60px 0px 0px;">Address 1 * </label>
+					<input type="text" name="address" required placeholder="House/Apt. Number and Street" size="35"><br>
+					<label for="district" style="margin: 0px 8px 0px 0px;">District/Barangay * </label>
+					<input type="text" id="district" name="district" required size="35"><br>
+					<label for="city" style="margin: 0px 103px 0px 0px;">City * </label>
+					<select required>
+						<option value="Select City" ></option>
+						<option value="Urdaneta">Urdaneta</option>
+					  </select>
 					<br>
-					<h2>Option</h2>
+					<label for="pos" style="margin: 0px 47px 0px 0px;">Postal Code * </label>
+					<input type="text" id="pos" name="pos" size="35"><br>
+					<label for="pro" style="margin: 0px 70px 0px 0px;">Province * </label>
 					<select>
-					  <option value="volvo">Volvo</option>
-					  <option value="saab">Saab</option>
-					  <option value="opel">Opel</option>
-					  <option value="audi">Audi</option>
-					</select>
-					<br/>
-					
-					<h2>Option Group</h2>
-						<select>
-						  <optgroup label="Swedish Cars">
-							<option value="volvo">Volvo</option>
-							<option value="saab">Saab</option>
-						  </optgroup>
-						  <optgroup label="German Cars">
-							<option value="mercedes">Mercedes</option>
-							<option value="audi">Audi</option>
-						  </optgroup>
-						</select>
+						<option value="Select Province"></option>
+						<option value="Pangasinan">Pangasinan</option>
+					  </select>
+					<br>
 				</fieldset>
-				
-				<fieldset>
-				<legend><h3>Buttons</h3></legend>
-					<input type="button" onclick="alert('Thanks!')" value="Click Me!"><br>
-					<input type="reset" onclick="alert('Bye Now!')" value=" Reset "><br>
-					<input type="submit" onclick="alert('Thanks, again!')" value=" Submit Now! ">
+		
+			<br>
+		
+				<fieldset style="margin: 0px">
+					<legend>Membership Information</legend>
+					<label for="username" style="margin: 0px 60px 0px 0px;">Username * </label>
+					<input type="text" id="username" name="username" required placeholder="At least 8 alphanumeric characters" size="35"><br>
+					<label for="password" style="margin: 0px 65px 0px 0px;">Password * </label>
+					<input type="password" id="password" name="password" required placeholder="Enter a password" size="35"><br>
+					<label for="magsub"	>Magazine<br><span>Subscriptions</span></label>
+					<input style="margin: 0px 0px 0px 52px;" type="checkbox" id="magsub" name="magsub" value="PCMagazine"> PCMagazine<br>
+					<input style="margin: 0px 0px 0px 150px;" type="checkbox" id="magsub" name="magsub" value="Wired"> Wired<br>
+					<input style="margin: 0px 0px 0px 150px;" type="checkbox" id="magsub" name="magsub" value="Computerworld"> Computerworld<br>
+					<input style="margin: 0px 0px 0px 150px;" type="checkbox" id="magsub" name="magsub" value="I don't subscribe"> I don't subscribe<br>
+					<input style="margin: 0px 0px 0px 150px;" type="checkbox" id="magsub" name="magsub" value="Other"> Other<br>
 				</fieldset>
-			</fieldset>
-			</form>
-		</blockquote>
-		</font>
-		</body>
+			<p><button>Submit order</button></p>
+			<br>
+		</form>
+	</font>
+	</body>
 </html>
