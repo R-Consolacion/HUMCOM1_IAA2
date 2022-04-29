@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+            function sayHello(who) {
+                document.write("Hello, " +who);
+            } //that (who) inside sayHello is a variable initialized inside
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("Hello, World!<br><br>");
+
+            var myvariable  = 3;
+            var ttrue = true;
+            var ffalse = false;
+            if(myvariable > 5){
+               document.write(myvariable + " > 5" + " = " + ttrue);
+            } else {
+            document.write(myvariable + " < 5" + " = " + ffalse);  
+            }document.write("<br><br>");
+
+            var words = "This is";
+            var morewords = " a sentence";
+            var sentence = words + morewords;
+            document.write(sentence + "<br><br>");
+
+            var alpha = "ABCDEFG";
+            var length = alpha.length;
+            document.write("The length of \"" + alpha + "\"" +" is " + length + "<br><br>");
+
+            var alpha = "ABCDEFG";
+            var result = alpha.substring(0, 3); //substring is like getting a certain character from the string, when using two numbers with comma, it means that it stops there like (3, 5 it stopped at DE did not include F in the result), length starts at 0
+            document.write(result+"<br><br>");  
+            
+            var a = new Array(7);
+            a[0] = "cat";
+            a[1] = "dog";
+            a[2] = 95;
+            a[6] = true;
+            document.write(a[0]); //array long method with declare and initialization
+
+            var b = new Array("cat", "dog", 53, true);
+            document.write(b[0]); //array instantiation having declared the variables and the size
+
+            var c = ["dog", "cat", 3, 5, false];
+            document.write(c[1]+"<br><br>"); //shorthand method of making an array in JavaScript
+
+
+            //this line goes with the function above in the title script
+            sayHello("Bob");
+            document.write("<br>");
+            sayHello("Mary"); //it kinds of combines the initialized variable to create or make a full sentence
+            document.write("<br><br>");
+            
+            
+            //if...else statements
+            var ifa = 10;
+            if(ifa > 10){
+                alert(ifa);
+            }else{
+                alert("Condition is not true.");
+            }
+
+            //Loops
+            document.write("Loop starts from 0: " + "<br>");
+            for(i=0; i<=5; i++){
+                document.write("This is iteration " + i + "<br>");
+            }
+        </script>
+    </body>
+</html>
