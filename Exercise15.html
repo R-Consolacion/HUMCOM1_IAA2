@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Renato Consolacion" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exercise 15 - 17</title>
+        <link rel="stylesheet" type="text/css" href="Exercise15.css">
+        <script language="Javascript" type="text/javascript" src="Script15.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="container">
+                <h1 class="title">Student Information Sheet</h1>
+                <h2>Personal Info</h2>
+            <form>
+                <div id="fullname"> <span>Full Name</span>
+                  <input type="text" placeholder="Renato Consolacion" required> </div>
+                <div id="age"> <span>Age</span>
+                  <input type="text" placeholder="19" required> </div>
+                <h2 class="title">Contact Information</h2>
+                <div id="mobile"> <span>Phone Number</span>
+                    <input type="text" placeholder="09664980475" required> </div>
+                <div id="email"> <span>Email Address</span>
+                    <input type="text" placeholder="20217141@s.ubaguio.edu" required> </div>
+                <div id="address"> <span>Mailing Address</span>
+                    <input type="text" placeholder="Consolacion, Urdaneta City, Pangasinan" required> </div>
+                <h2 class="title">Academic Information</h2>
+                <div id="program"> <span>Program</span>
+                    <input type="text" placeholder="Information Technology" required> </div>
+                <div id="idnumber"> <span>IDnumber</span>
+                    <input type="text" placeholder="20217141" required> </div>
+                <div id="yearlvl"> <span>Year Level</span>
+                    <input type="text" placeholder="1st Year" required> </div>
+                <div id="section"> <span>Section</span>
+                    <input type="text" placeholder="IAA2" required> </div>
+                <input onclick="return submitForm(this);" onsubmit="return submitForm(this);" name="submit" type="submit" value="Submit"> 
+            </form>
+        </div>
+    </body>
+</html>
